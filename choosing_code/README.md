@@ -57,6 +57,6 @@ from the user, or in this case, even the `print()` statement.
 Whatever you choose for your own snippet should be isolated in a similar
 manner, reducing it to it's most atomic level of functionality.
 
-[It's time to turn your encapsulated code into a Python package!](creating_new_python_packages/README.rst)
+[It's time to turn your encapsulated code into a Python package!](/creating_new_python_packages/README.rst)
 
 

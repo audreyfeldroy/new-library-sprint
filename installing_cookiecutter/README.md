@@ -36,4 +36,4 @@ installing, let's check that it's working okay with a version check:
     Cookiecutter 0.7.2
 
 If the result is `Cookiecutter 0.7.2`, that means it's time to [find some
-code to turn into a Python package](choosing_code/README.md)!
+code to turn into a Python package](/choosing_code/README.md)!
