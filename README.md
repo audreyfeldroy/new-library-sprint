@@ -35,6 +35,7 @@ We assume the following of those using this book:
 
 You will:
 
+* Install [cookiecutter](https://github.com/audreyr/cookiecutter).
 * Take a bit of code that you've written, be it a module, function,
 class, or even a snippet, and turn it into a package that will be uploaded
 onto PyPI.

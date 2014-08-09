@@ -29,9 +29,11 @@ designed to expedite project creation. While in this sprint we're using it
 for Python, people have created hundreds of JavaScript, Ruby, Lisp, C, C++,
 Objective-C templates powered by this tool.
 
-Cookiecutter should take about a minute to install. Once it finishes
-installing, let's check it's version:
+Cookiecutter should take about a minute to install. Once cookiecutter finishes
+installing, let's check that it's working okay with a version check:
 
     (cc) $ cookiecutter --version
     Cookiecutter 0.7.2
 
+If the result is `Cookiecutter 0.7.2`, that means it's time to [find some
+code to turn into a Python package](choosing_code/README.md)!
