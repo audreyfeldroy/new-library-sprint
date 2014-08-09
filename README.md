@@ -15,12 +15,21 @@ copy/paste the boilerplate code from one project to another. They do this
 because trying to work through finicky boilerplate simply isn't as productive
 as creating new packages from existing snippets of code.
 
+> **Info**  TODO: Explain what 'boilerplate code' means
+
 This sprint is the an answer to learning how to quickly overcome getting
 around finicky boilerplate. It will introduce you to a number of useful
 concepts and a wonderful tool called [cookiecutter](https://github.com/audreyr/cookiecutter).
 
-Are you ready to package up some code? Learn some new things? Great! Let's
-get started!
+
+## Prerequisites
+
+We assume the following of those using this book:
+
+* You have Python 2.7.x or 3.3 (or higher) installed.
+* You have `pip` and `virtualenv` installed. `virtualenv_wrapper` is nice, but not mandatory.
+* You know how to write Python code.
+* You probably have a snippet of code that you copy from place to place.
 
 ## What will you do during the sprint?
 
@@ -34,11 +43,5 @@ onto PyPI.
 * Use `pip` to check if your Python package installs locally.
 * Share with your friends and colleagues your Python package.
 
-## Prerequisites
-
-We assume the following of those using this book:
-
-* You have Python 2.7.x or 3.3 (or higher) installed.
-* You have `pip` and `virtualenv` installed. `virtualenv_wrapper` is nice, but not mandatory.
-* You know how to write Python code.
-* You probably have a snippet of code that you copy from place to place.
+Are you ready to package up some code? Learn some new things? Great! Let's
+get started by [installing Cookiecutter](installing_cookiecutter/README.md)!
