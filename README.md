@@ -27,7 +27,7 @@ concepts and a wonderful tool called [cookiecutter](https://github.com/audreyr/c
 We assume the following of those using this book:
 
 * You have Python 2.7.x or 3.3 (or higher) installed.
-* You have `pip` and `virtualenv` installed. `virtualenv_wrapper` is nice, but not mandatory.
+* You have `pip` and `virtualenv` installed. `virtualenvwrapper` is nice, but not mandatory.
 * You know how to write Python code.
 * You probably have a snippet of code that you copy from place to place.
 
