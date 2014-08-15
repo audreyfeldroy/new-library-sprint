@@ -15,14 +15,5 @@ Here's what you'll do:
 
 ## Steps
 
-1. TODO
-2. TODO
-
-## Summary
-
-You have now released your library:
-
-* On GitHub as an open-source project
-* On PyPI as an open-source Python package
-
-Now others can use your library in their projects. They can even contribute back with bug fixes and new features.
+1. Choose a name for your library. Look at PyPI for examples. This will be your project's name.
+2. If the name contains spaces, turn them into underscores. Use lowercase rather than CamelCase.

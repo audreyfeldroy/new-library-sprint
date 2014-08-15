@@ -23,5 +23,13 @@ Here's what you'll do:
 2. Answer the prompts:
 
     ```
-    $ cookiecutter https://github.com/audreyr/cookiecutter-pypackage.git
+    TODO show example of prompts
+    ```
+
+3. Examine the directory that was generated.
+
+    ```
+    ls
+    cd repo_name
+    ls
     ```
