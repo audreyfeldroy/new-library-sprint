@@ -15,12 +15,17 @@ copy/paste the boilerplate code from one project to another. They do this
 because trying to work through finicky boilerplate simply isn't as productive
 as creating new packages from existing snippets of code.
 
-> **Info**  TODO: Explain what 'boilerplate code' means
-
 This sprint is the an answer to learning how to quickly overcome getting
 around finicky boilerplate. It will introduce you to a number of useful
 concepts and a wonderful tool called [cookiecutter](https://github.com/audreyr/cookiecutter).
 
+> **Info**  "Boilerplate" refers to the starter code that every project begins with.
+
+## Who should participate
+
+If you're comfortable writing simple Python scripts or programs, you should be fine.
+
+Knowledge of Python past the "Hello World" basics is recommended. If you've never done a Python tutorial before, you should probably do one and practice writing Python scripts before joining this sprint.
 
 ## Prerequisites
 
@@ -35,14 +40,16 @@ We assume the following of those using this book:
 
 You will:
 
-* Install [cookiecutter](https://github.com/audreyr/cookiecutter).
 * Take a bit of code that you've written, be it a module, function,
 class, or even a snippet, and turn it into a package that will be uploaded
 onto PyPI.
+* Install [Cookiecutter](https://github.com/audreyr/cookiecutter).
+* Use Cookiecutter to generate Python package boilerplate.
+* Put your code into the package.
 * Create an account on PyPI if you don't have one yet.
 * Upload your Python package onto PyPI.
 * Use `pip` to check if your Python package installs locally.
 * Share with your friends and colleagues your Python package.
 
 Are you ready to package up some code? Learn some new things? Great! Let's
-get started by [installing Cookiecutter](installing_cookiecutter/README.md)!
+get started.

@@ -1,4 +1,4 @@
-# New Library
+# Planning Your New Library
 
 These instructions are for sprinters who want to create an open-source Python library.
 
@@ -10,9 +10,8 @@ A great way to contribute to Python is by taking code that you normally copy-pas
 
 Here's what you'll do:
 
-1. Take 1 or more Python code snippets and turn them into a reusable library
-2. Put it on GitHub
-3. Register/upload it to the Python Package Index
+1. Think carefully about your Python code snippets
+2. Come up with a name for a reusable library
 
 ## Steps
 
