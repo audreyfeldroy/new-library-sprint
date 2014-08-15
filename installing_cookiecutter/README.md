@@ -1,9 +1,9 @@
 # Installing Cookiecutter
 
-Before we do anything else, let's get our environment ready. We'll also need
-the [cookiecutter](https://github.com/audreyr/cookiecutter) library to handle
-most of the boilerplate code. As mentioned previously, you should already have
-`pip` available.
+Let's get our environment ready. We'll need the [cookiecutter](https://github.com/audreyr/cookiecutter) library to handle
+generating the Python packaging boilerplate code.
+
+As mentioned previously, you should already have `pip` available.
 
 ## Overview
 
