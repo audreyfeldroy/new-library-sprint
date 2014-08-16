@@ -14,16 +14,23 @@ Here's what you'll do:
 
 ## Steps
 
-1. Run Cookiecutter with cookiecutter-pypackage:
+1. Run Cookiecutter with cookiecutter-pymodule:
 
     ```
-    $ cookiecutter https://github.com/audreyr/cookiecutter-pypackage.git
+    $ cookiecutter https://github.com/pydanny/cookiecutter-pymodule.git
     ```
 
 2. Answer the prompts:
 
     ```
-    TODO show example of prompts
+    $ cookiecutter https://github.com/pydanny/cookiecutter-pymodule
+    module_name (default is "The name of the to-be-packaged model.")? upper_casing
+    full_name (default is "Roberta Roberts")?
+    email (default is "roberts@example.com")?
+    github_username (default is "roberta-example")?
+    short_description (default is "This package does X")? Upper cases strings
+    release_date (default is "2014-01-11")?
+    console_script_name (default is "")?
     ```
 
 3. Examine the directory that was generated.

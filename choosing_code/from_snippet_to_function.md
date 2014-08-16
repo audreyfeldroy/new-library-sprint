@@ -23,24 +23,26 @@ print(value.upper())
 
 Here is how we encapsulate the previous code into a function:
 
-    # upper_casing.py
-    import sys
+```python
+# upper_casing.py
+import sys
 
-    # Define the main function of our program
-    def main(value):
-        """Uppercases the value"""
-        # return the value passed into main as an upper-cased string
-        return value.upper()
+# Define the main function of our program
+def main(value):
+    """Uppercases the value"""
+    # return the value passed into main as an upper-cased string
+    return value.upper()
 
-    if __name__ == "__main__":
-        # Get the input value from the user
-        value = sys.argv[1]
+if __name__ == "__main__":
+    # Get the input value from the user
+    value = sys.argv[1]
 
-        # Run the value through the main function
-        value = main(value)
+    # Run the value through the main function
+    value = main(value)
 
-        # Display the result via the print function
-        print(value)
+    # Display the result via the print function
+    print(value)
+```
 
 What's important about this example is that we've isolated the core
 functionality of the code snippet into the `main()` function. We've done our
