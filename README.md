@@ -1,5 +1,13 @@
 # New Library Sprint
 
+These instructions are for sprinters who want to create an open-source Python library.
+
+## Why?
+
+A great way to contribute to Python is by taking code that you normally copy-paste over and over and packaging it up for the Python Package Index.
+
+TODO screenshot of PyPI
+
 ## Welcome
 
 Do you have a script, function, or even a snippet of Python code you copy from

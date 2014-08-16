@@ -1,10 +1,5 @@
 # Planning Your New Library
 
-These instructions are for sprinters who want to create an open-source Python library.
-
-## Why?
-
-A great way to contribute to Python is by taking code that you normally copy-paste over and over and packaging it up for the Python Package Index.
 
 ## Overview
 

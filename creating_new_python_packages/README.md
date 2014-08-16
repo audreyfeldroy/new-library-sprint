@@ -33,3 +33,9 @@ Here's what you'll do:
     cd repo_name
     ls
     ```
+
+## Summary
+
+You now have a Python package, but other than the boilerplate it's still empty.
+
+Next, you'll put your Python code into your Python package.

@@ -6,9 +6,14 @@ If you run into a problem not listed here, please submit a pull request with:
 * The exact commands that you ran, and the error message or other problem that you encountered
 * Steps to follow to resolve the problem
 
-## Oh no! I have an old version of Cookiecutter
+## Installing Cookiecutter
+
+### Oh no! I have an old version of Cookiecutter
 
 To upgrade, run:
 
     pip install -U cookiecutter
 
+## Other problems
+
+Ask for help.

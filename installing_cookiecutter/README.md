@@ -9,11 +9,11 @@ As mentioned previously, you should already have `pip` available.
 
 [Cookiecutter](https://github.com/audreyr/cookiecutter) is a command-line utility that creates projects from templates called 'cookiecutters'. Created and led by Audrey Roy, it's a cross-platform tool designed to expedite project creation.
 
-While in this sprint we're using it for Python, people have created Cookiecutter project templates that set up packaging boilerplate for JavaScript, Ruby, Lisp, C, C++, Objective-C, and other languages.
+While in this sprint we're using it to create a Python package, people use Cookiecutter to create packages or projects in JavaScript, Ruby, Lisp, C, C++, Objective-C, and more.
 
 ## Steps
 
-Now it's time to install [cookiecutter](https://github.com/audreyr/cookiecutter).
+Now it's time to install [Cookiecutter](https://github.com/audreyr/cookiecutter).
 
 From the command line, we type:
 
