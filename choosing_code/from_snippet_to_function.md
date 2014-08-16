@@ -10,6 +10,7 @@ Your snippet of code should be encapsulated in a function, otherwise packaging
 the code won't be so useful. For example, code like this needs to be placed
 in a function:
 
+    ```python
     # upper_casing.py
     import sys
 
@@ -18,6 +19,7 @@ in a function:
 
     # Display the value in upper cased format.
     print(value.upper())
+    ```
 
 Here is how we encapsulate the previous code into a function:
 
@@ -48,6 +50,4 @@ from the user, or in this case, even the `print()` statement.
 
 Whatever you choose for your own snippet should be isolated in a similar
 manner, reducing it to its most atomic level of functionality.
-
-[It's time to turn your encapsulated code into a Python package!](/creating_new_python_packages/README.rst)
 
