@@ -10,16 +10,16 @@ Your snippet of code should be encapsulated in a function, otherwise packaging
 the code won't be so useful. For example, code like this needs to be placed
 in a function:
 
-    ```python
-    # upper_casing.py
-    import sys
+```python
+# upper_casing.py
+import sys
 
-    # Get the input value from the user
-    value = sys.argv[1]
+# Get the input value from the user
+value = sys.argv[1]
 
-    # Display the value in upper cased format.
-    print(value.upper())
-    ```
+# Display the value in upper cased format.
+print(value.upper())
+```
 
 Here is how we encapsulate the previous code into a function:
 
