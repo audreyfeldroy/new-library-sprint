@@ -14,6 +14,21 @@ To upgrade, run:
 
     pip install -U cookiecutter
 
+### ImportError: Fix: pip install wheel
+
+If you try to `python setup.py publish` your project without the Wheel package
+installed, you'll get an error like:
+
+    python setup.py publish
+    Traceback (most recent call last):
+      File "setup.py", line 18, in <module>
+        raise ImportError("Fix: pip install wheel")
+    ImportError: Fix: pip install wheel
+
+In order to correct this problem, do as the error says from the command-line:
+
+    pip install wheel
+
 ## Other problems
 
 Ask for help.
