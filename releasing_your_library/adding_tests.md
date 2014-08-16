@@ -6,6 +6,7 @@
 2. Paste in your code.
 3. Run the tests from the command-line:
 
+    ```
     py.test
     ====================== session starts ==================
     platform darwin -- Python 2.7.5 -- py-1.4.23 -- pytest-2.6.1
@@ -14,6 +15,7 @@
     test_upper_casing.py .
 
     ================ 1 passed in 0.01 seconds ==============
+    ```
 
 If you open your test file (test_upper_casing in this example), you will discover
 a single, useless test:
