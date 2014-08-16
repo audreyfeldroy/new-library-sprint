@@ -54,6 +54,7 @@ onto PyPI.
 * Install [Cookiecutter](https://github.com/audreyr/cookiecutter).
 * Use Cookiecutter to generate Python package boilerplate.
 * Put your code into the package.
+* Add two useful tests.
 * Create an account on PyPI if you don't have one yet.
 * Upload your Python package onto PyPI.
 * Use `pip` to check if your Python package installs locally.

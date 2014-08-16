@@ -1,6 +1,7 @@
 # Releasing Your Library
 
-## Steps
+
+## Releasing on GitHub
 
 1. Create a GitHub repo.
 2. Push your package code to GitHub.
@@ -39,7 +40,16 @@
     It's that last line is important. It should say, `Server response (200): OK`. If
     it doesn't please read the Troubleshooting chapter for answers.
 
-4. Do your first release.
+## Registering on PyPI
+
+Note: If you've already done this in the past, you can skip to the next section.
+
+TODO this whole section
+
+
+## Releasing on PyPI
+
+From the command-line
 
     ```
     python setup.py publish
