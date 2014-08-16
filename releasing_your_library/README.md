@@ -5,19 +5,19 @@
 1. Create a GitHub repo.
 2. Push your package code to GitHub.
 
-```
-cd repo_name
-git init
-git add .
-git commit -m "Initial commit"
-git push -u origin master
-```
+    ```
+    cd repo_name
+    git init
+    git add .
+    git commit -m "Initial commit"
+    git push -u origin master
+    ```
 
 3. Register your package on PyPI.
 
-```
-python setup.py sdist register
-```
+    ```
+    python setup.py sdist register
+    ```
 
 4. Do your first release.
 
