@@ -63,4 +63,4 @@ Run the test again:
 
     ================ 2 passed in 0.01 seconds ==============
 
-Hooray! actually useful tests passed!
+Hooray! Your "actually useful" tests passed!
