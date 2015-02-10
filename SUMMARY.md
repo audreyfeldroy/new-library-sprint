@@ -7,6 +7,7 @@
 * [Installing Cookiecutter](installing_cookiecutter.md)
 * [Creating a Skeleton Python Package](creating_new_python_packages.md)
 * [Adding Tests](adding_tests.md)
+* [Adding Docs](adding_docs.md)
 * [Releasing Your Library](releasing_your_library.md)
 * [Troubleshooting](troubleshooting.md)
 
