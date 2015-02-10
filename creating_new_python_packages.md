@@ -14,35 +14,37 @@ Here's what you'll do:
 
 ## Steps
 
-1. Run Cookiecutter with cookiecutter-pymodule:
+1. Run Cookiecutter with cookiecutter-pypackage:
 
     ```
-    $ cookiecutter https://github.com/pydanny/cookiecutter-pymodule.git
+    $ cookiecutter https://github.com/audreyr/cookiecutter-pypackage.git
     ```
 
 2. Answer the prompts:
 
     ```
-    $ cookiecutter https://github.com/pydanny/cookiecutter-pymodule
-    module_name (default is "The name of the to-be-packaged model.")? upper_casing
-    full_name (default is "Roberta Roberts")?
-    email (default is "roberts@example.com")?
-    github_username (default is "roberta-example")?
-    short_description (default is "This package does X")? Upper cases strings
-    release_date (default is "2014-01-11")?
-    console_script_name (default is "")?
+    $ cookiecutter https://github.com/audreyr/cookiecutter-pypackage
+    full_name (default is "Audrey Roy")? Roberta Roberts
+    email (default is "audreyr@gmail.com")? roberta@example.com
+    github_username (default is "audreyr")? robertaexample
+    project_name (default is "Python Boilerplate")? Uppercasing
+    repo_name (default is "boilerplate")? uppercasing
+    project_short_description (default is "Python Boilerplate contains all the boilerplate you need to create a Python package.")? Uppercasing uppercases strings for you.
+    release_date (default is "2014-01-11")? 2015-02-09
+    year (default is "2014")? 2015
+    version (default is "0.1.0")? 0.1.0
     ```
 
 3. Examine the directory that was generated.
 
     ```
     ls
-    cd repo_name
+    cd uppercasing
     ls
     ```
 
 ## Summary
 
-You now have a Python package, but other than the boilerplate it's still empty.
+You now have a Python package. But other than the boilerplate, it's still empty.
 
 Next, you'll put your Python code into your Python package.
