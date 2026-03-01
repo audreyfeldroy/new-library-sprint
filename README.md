@@ -1,64 +1,55 @@
 # New Library Sprint
 
-These instructions are for sprinters who want to create an open-source Python library.
+Create and publish your own Python package in one sprint session.
 
-## Why?
+## PythonAsia 2026
 
-A great way to contribute to Python is by taking code that you normally copy-paste over and over and packaging it up for the Python Package Index.
+Welcome, sprinters! By the end of today, you'll have a real Python package on PyPI that anyone in the world can `pip install`. Several past sprint participants have gone on to maintain popular packages that started exactly this way.
 
-TODO screenshot of PyPI
+## Why package your code?
 
-## Welcome
+You've probably written a useful function, class, or script that you copy between projects. Packaging it means:
 
-Do you have a script, function, or even a snippet of Python code you copy from
-project to project? Rather than copying this little bit of Python code, have
-you ever considered just releasing your code on the Python Package Index
-(PyPI)? That way you can add tests, documentation, and even get some help on
-your code. Sounds wonderful, right?
+- **Others can use it.** A single `pip install your-package` and they're off.
+- **You get tests and CI for free.** The template sets up pytest, GitHub Actions, and linting from the start.
+- **You practice real open-source workflow.** Git, GitHub, PyPI, versioning, documentation.
 
-The downside of releasing something on PyPI is that it's not easy. There
-are a lot of finicky boilerplate files that go into a Python package. While
-pretty well documented, it's not easy and even the best Python coders often
-copy/paste the boilerplate code from one project to another. They do this
-because trying to work through finicky boilerplate simply isn't as productive
-as creating new packages from existing snippets of code.
-
-This sprint is the an answer to learning how to quickly overcome getting
-around finicky boilerplate. It will introduce you to a number of useful
-concepts and a wonderful tool called [cookiecutter](https://github.com/audreyr/cookiecutter).
-
-> **Info**  "Boilerplate" refers to the starter code that every project begins with.
+There are over 600,000 packages on PyPI. Yours could be next.
 
 ## Who should participate
 
-If you're comfortable writing simple Python scripts or programs, you should be fine.
+If you're comfortable writing simple Python scripts or programs, you'll be fine. Knowledge of Python past the "Hello World" basics is recommended.
 
-Knowledge of Python past the "Hello World" basics is recommended. If you've never done a Python tutorial before, you should probably do one and practice writing Python scripts before joining this sprint.
+No packaging experience required. That's what this sprint is for.
 
 ## Prerequisites
 
-We assume the following of those using this book:
+You'll need:
 
-* You have Python 2.7.x or 3.3 (or higher) installed.
-* You have `pip` and `virtualenv` installed. `virtualenvwrapper` is nice, but not mandatory.
-* You know how to write Python code.
-* You probably have a snippet of code that you copy from place to place.
+- **Python 3.12 or higher** installed
+- **uv** installed ([installation guide](https://docs.astral.sh/uv/getting-started/installation/))
+- **just** installed ([installation guide](https://just.systems/man/en/installation.html))
+- **git** installed and configured
+- A **GitHub** account
+- A **PyPI** account ([register here](https://pypi.org/account/register/))
+- A text editor or IDE you're comfortable with
+- A snippet, function, or class you'd like to package (or an idea for one)
 
-## What will you do during the sprint?
+> **New to uv?** It's the modern way to manage Python projects and tools. It replaces pip, virtualenv, and setuptools in one fast tool.
+>
+> **New to just?** It's a command runner (like make, but simpler). The template uses it to run tests, linting, docs, and releases with short commands like `just qa`.
 
-You will:
+## What you'll do
 
-* Take a bit of code that you've written, be it a module, function,
-class, or even a snippet, and turn it into a package that will be uploaded
-onto PyPI.
-* Install [Cookiecutter](https://github.com/audreyr/cookiecutter).
-* Use Cookiecutter to generate Python package boilerplate.
-* Put your code into the package.
-* Add two useful tests.
-* Create an account on PyPI if you don't have one yet.
-* Upload your Python package onto PyPI.
-* Use `pip` to check if your Python package installs locally.
-* Share with your friends and colleagues your Python package.
+1. **Choose code** to package (or come up with an idea)
+2. **Turn it into a function** if it isn't one already
+3. **Plan your library** (pick a name, think about the API)
+4. **Generate the package skeleton** with `uvx cookiecutter-pypackage` (one command, no install needed)
+5. **Drop your code in** and write a couple of tests
+6. **Add basic docs**
+7. **Push to GitHub** and publish to PyPI
+8. **Install your own package** with pip and celebrate
 
-Are you ready to package up some code? Learn some new things? Great! Let's
-get started.
+The template gives you a modern Python package with pyproject.toml, GitHub Actions CI, pytest, ruff linting, and automated PyPI publishing out of the box.
+
+Ready? Let's get started.

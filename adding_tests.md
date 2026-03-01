@@ -1,66 +1,94 @@
-# Adding Tests
+# Adding Your Code and Tests
 
-## Steps
+## Put your code in the package
 
-1. Look at the `.py` files for your new skeleton package. The one you are looking for is what your package is called. Open that module in your favorite text editor or IDE.
-2. Paste in your code.
-3. Run the tests from the command-line:
+1. Find the main module inside `src/`. It will be named after your package (with underscores). For our example, that's `src/text_cleanser/__init__.py` or a module file inside that directory.
+
+2. Paste in your function(s). For example:
+
+    ```python
+    # src/text_cleanser/__init__.py
+
+    def clean_whitespace(text: str) -> str:
+        """Normalize whitespace in text.
+
+        Collapses multiple spaces, tabs, and newlines into single spaces,
+        and strips leading/trailing whitespace.
+        """
+        return " ".join(text.split())
+    ```
+
+3. Verify the import works:
 
     ```
-    py.test
-    ====================== session starts ==================
-    platform darwin -- Python 2.7.5 -- py-1.4.23 -- pytest-2.6.1
-    collected 1 items
-
-    test_upper_casing.py .
-
-    ================ 1 passed in 0.01 seconds ==============
+    uv run python -c "from text_cleanser import clean_whitespace; print(clean_whitespace('  hello   world  '))"
     ```
 
-If you open your test file (test_upper_casing in this example), you will discover
-a single, useless test:
+    You should see: `hello world`
+
+## Write tests
+
+Open the test file in `tests/`. You'll find a starter test. Replace it with real tests for your code:
 
 ```python
-import pytest
-import upper_casing
+from text_cleanser import clean_whitespace
 
 
-def test_the_obvious():
-    assert True == True
+def test_collapses_multiple_spaces():
+    assert clean_whitespace("hello   world") == "hello world"
 
 
-if __name__ == '__main__':
-    pytest.main()
+def test_strips_leading_trailing():
+    assert clean_whitespace("  hello  ") == "hello"
+
+
+def test_normalizes_tabs_and_newlines():
+    assert clean_whitespace("hello\t\tworld\n\nfoo") == "hello world foo"
+
+
+def test_empty_string():
+    assert clean_whitespace("") == ""
+
+
+def test_already_clean():
+    assert clean_whitespace("hello world") == "hello world"
 ```
 
-Let's change the test so it is actually useful.
+### Tips for good tests
 
+- **Test the happy path.** What should happen with normal input?
+- **Test edge cases.** Empty strings, very long strings, special characters.
+- **Test that wrong input gives the right error.** If your function should raise an exception, test for it.
+- **One assertion per test** keeps failures easy to diagnose.
+- **Name your tests after what they verify**, not what they call.
 
-```python
-import pytest
-import upper_casing
+## Run everything
 
+The fastest way to check your work is:
 
-def test_upper_case():
-    assert upper_casing.upper_casing("halo") == "HALO"
-
-def test_to_fail():
-    assert upper_casing.upper_casing("halo") != "halo"
-
-
-if __name__ == '__main__':
-    pytest.main()
+```
+just qa
 ```
 
-Run the test again:
+This runs formatting, linting, type checking, and tests in one command. You should see something like:
 
-    $ py.test
-    ====================== session starts ==================
-    platform darwin -- Python 2.7.5 -- py-1.4.23 -- pytest-2.6.1
-    collected 1 items
+```
+ruff format .
+ruff check .
+pyright
+uv run pytest
+========================= test session starts ==========================
+collected 5 items
 
-    test_upper_casing.py ..
+tests/test_text_cleanser.py .....                                [100%]
 
-    ================ 2 passed in 0.01 seconds ==============
+========================== 5 passed in 0.01s ===========================
+```
 
-Hooray! Your "actually useful" tests passed!
+All green! If ruff or pyright flag anything, fix those issues before moving on. The error messages are usually clear about what to change.
+
+You can also run just the tests if you want a quicker feedback loop while writing code:
+
+```
+just test
+```

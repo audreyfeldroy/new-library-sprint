@@ -1,15 +1,44 @@
 # Adding Docs
 
-## Steps
+Your package template came with a documentation setup. Let's fill it in.
 
-1. Look at the skeleton documentation for your new skeleton package. That is, look inside the `docs/` folder at the `.rst` files. Open those files in your favorite text editor or IDE.
-2. Modify one of the `.rst` files. For example, you probably need to update `docs/usage.rst` with proper instructions.
-3. From your package directory, build the docs from the command line:
+## Update the README
 
-    ```
-    $ make docs
-    ```
+The generated `README.md` already has your project name and description. Update it with:
 
-You should see a browser open with the rendered HTML version of your docs.
+- A quick usage example showing how to import and call your function
+- Installation instructions (`pip install your-package-name`)
 
-Compare the docs with the `.rst` files. Look for parts that need to be filled in. Edit your `.rst` files and rebuild the docs.
+A good README example section looks like:
+
+```markdown
+## Usage
+
+```python
+from text_cleanser import clean_whitespace
+
+clean = clean_whitespace("  hello   world  ")
+print(clean)  # "hello world"
+```
+```
+
+That's often enough for a first release. People can figure out a lot from one clear example.
+
+## Build the docs locally
+
+The template uses mkdocs for documentation. To preview:
+
+```
+just docs-serve
+```
+
+This starts a local server where you can see your rendered docs. Look through the pages and fill in any sections that need your input, especially the usage page.
+
+## What to document first
+
+For a sprint, focus on:
+
+1. **README.md**: Installation + one usage example. This is what people see first on PyPI and GitHub.
+2. **Docstrings**: You already wrote these when you added your code. mkdocstrings will pull them into the docs automatically.
+
+That's enough for a first release. You can always add tutorials, API reference pages, and guides later.

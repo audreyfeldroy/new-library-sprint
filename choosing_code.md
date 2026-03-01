@@ -1,48 +1,46 @@
-# Choosing Code!
+# Choosing Code
 
-The hardest part of creating a new Python library is coming up with a good idea.
+The hardest part of creating a new Python library is coming up with a good idea. But it doesn't have to be a big idea.
 
-## Suggestions for your first Python library
+## Pick something useful
 
-### Pick something useful
+Look for code you've written (or want to write) that does one thing well:
 
-Try to pick something useful that you've written or want to write:
+- A useful function you copy between projects
+- A few related utility functions
+- A class that wraps something awkward into something clean
+- A context manager
+- A decorator
+- A CLI tool you keep rewriting
+- A data validation or transformation helper
 
-* A useful function
-* A few functions that are related somehow
-* A class that does something useful
-* A useful context manager
-* Any other useful snippet
+### How do you know if it's useful?
 
-#### How do you know if it's useful?
+- You've copied and pasted it from one project to another
+- You've seen someone else solve the same problem in a worse way
+- You could imagine wanting it in a future project
+- You've explained the trick to a colleague more than once
 
-Here are some signs that a piece of code is useful:
+### Keep it small
 
-* You've copied and pasted it from one project to another
-* You could imagine use cases for wanting it in future projects
+For this sprint, keep your scope as small as possible. If this is your first Python package, fewer lines of code is better.
 
-### Don't be overambitious
+Even a useful 3-line function is worth packaging. The package [cached-property](http://pydanny.com/cached-property.html) started as a tiny snippet that seemed too small to be worth it, and became one of the most downloaded packages on PyPI.
 
-For this sprint, keep your scope as small as possible. If this is your first Python package, the less lines of code, the better.
+## Ideas if you're stuck
 
-Even a useful 3-line function is worth packaging.
+- **String utilities**: slugify, truncate with ellipsis, extract emails from text
+- **Date/time helpers**: relative time ("3 days ago"), business day calculations, timezone-aware "now"
+- **File utilities**: safe temp files, atomic writes, recursive directory hashing
+- **Data cleaning**: normalize whitespace, strip accents, convert between naming conventions (camelCase to snake_case)
+- **CLI helpers**: colored output, progress bars, yes/no prompts
+- **Config helpers**: merge nested dicts, load from environment variables with type casting
+- **API utilities**: retry with backoff, rate limiting decorator
+- **Math/stats**: running average, percentile calculation, human-readable file sizes
+- **Text processing**: Markdown to plain text, word frequency counter, simple template engine
 
-See [cached-property: Don't copy-paste code](http://pydanny.com/cached-property.html) for a story about a time that Daniel Greenfeld turned a tiny snippet that seemed unworthy of packaging into a useful package.
+## Don't panic
 
-## Still stuck?
+Your first Python library doesn't have to change the world. It's even okay if it's a bit silly. The point is to learn the workflow of packaging, testing, and publishing. You can always make something more ambitious next time.
 
-If you have no idea what to work on, consider:
-
-* Simple string utility functions
-* A web scraping function
-* A function that analyzes some "Big Data"
-* A simple command line tool for doing something with files
-* A cool image processing function
-
-### Don't panic
-
-Remember, **don't panic**.
-
-Your first Python library doesn't have to be one that changes the world.
-
-For your first effort, it's even okay if your library is a bit silly. No one is probably even going to notice your library among the 45,000+ PyPI packages.
+What matters is that you walk out of this sprint with a published package.

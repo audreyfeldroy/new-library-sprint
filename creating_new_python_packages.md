@@ -1,50 +1,100 @@
-# Creating a skeleton Python package
+# Creating a Skeleton Python Package
 
-Every Python package contains certain files.
+Now for the fun part: generating a complete Python package with one command.
 
 ## Overview
 
-You will generate the skeleton for a bare-bones Python package with Cookiecutter and cookiecutter-pypackage.
+You'll use [cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage) to generate a package skeleton that includes:
 
-Here's what you'll do:
-
-1. Take 1 or more Python code snippets and turn them into a reusable library
-2. Put it on GitHub
-3. Register/upload it to the Python Package Index
+- `pyproject.toml` for project configuration
+- GitHub Actions CI (lint, type check, test on Python 3.12/3.13/3.14)
+- Automated PyPI publishing via Trusted Publishers (no tokens needed)
+- pytest for testing
+- ruff for linting and formatting
+- pyright for type checking
+- Typer CLI entry point
+- Documentation with Zensical and mkdocstrings
+- A `justfile` with commands for all common tasks
 
 ## Steps
 
-1. Run Cookiecutter with cookiecutter-pypackage:
+1. Run the generator:
 
     ```
-    $ cookiecutter https://github.com/audreyr/cookiecutter-pypackage.git
+    uvx cookiecutter-pypackage
     ```
 
-2. Answer the prompts:
+    That's it. No need to install Cookiecutter first. `uvx` handles everything.
+
+2. Answer the prompts. Here's an example session:
 
     ```
-    $ cookiecutter https://github.com/audreyr/cookiecutter-pypackage
-    full_name (default is "Audrey Roy")? Roberta Roberts
-    email (default is "audreyr@gmail.com")? roberta@example.com
-    github_username (default is "audreyr")? robertaexample
-    project_name (default is "Python Boilerplate")? Uppercasing
-    repo_name (default is "boilerplate")? uppercasing
-    project_short_description (default is "Python Boilerplate contains all the boilerplate you need to create a Python package.")? Uppercasing uppercases strings for you.
-    release_date (default is "2014-01-11")? 2015-02-09
-    year (default is "2014")? 2015
-    version (default is "0.1.0")? 0.1.0
+    full_name [Audrey M. Roy Greenfeld]: Maria Santos
+    email [audreyfeldroy@example.com]: maria@example.com
+    github_username [audreyfeldroy]: mariasantos
+    pypi_package_name [python-boilerplate]: text-cleanser
+    project_name [Python Boilerplate]: Text Cleanser
+    project_short_description [...]: Clean and normalize messy text data.
+    pypi_username [mariasantos]: mariasantos
+    author_website []: https://mariasantos.dev
+    first_version [0.1.0]: 0.1.0
     ```
 
-3. Examine the directory that was generated.
+    Tips for answering:
+    - **pypi_package_name**: Use hyphens for multi-word names (e.g. `text-cleanser`). This is what people will `pip install`.
+    - **project_name**: The human-readable name. Can have spaces and capitals.
+    - **project_short_description**: One sentence. This shows up on PyPI.
+    - **first_version**: `0.1.0` is a great starting point.
+
+3. Explore the generated directory:
 
     ```
+    cd text-cleanser
     ls
-    cd uppercasing
-    ls
     ```
+
+    You'll see:
+
+    ```
+    LICENSE           README.md         docs/
+    justfile          pyproject.toml    src/
+    tests/            .github/
+    ```
+
+    Your code goes in `src/text_cleanser/`. The project uses a `src` layout, which prevents accidentally importing local code during testing.
+
+4. Set up the development environment:
+
+    ```
+    uv sync
+    ```
+
+    This creates a virtual environment and installs your package in editable mode with all dev dependencies.
+
+5. Verify everything works out of the box:
+
+    ```
+    just qa
+    ```
+
+    This runs formatting, linting, type checking, and tests in one command. It should pass with the starter code.
+
+6. Try the built-in CLI:
+
+    ```
+    uv run text-cleanser --help
+    ```
+
+    The template includes a Typer-based CLI entry point you can customize later.
+
+## See all available commands
+
+```
+just list
+```
+
+This shows you everything the justfile can do: run tests, serve docs, tag releases, and more.
 
 ## Summary
 
-You now have a Python package. But other than the boilerplate, it's still empty.
-
-Next, you'll put your Python code into your Python package.
+You now have a fully functional Python package with CI, linting, type checking, testing, docs, and a CLI, all generated from one command. Next, you'll put your code into it.

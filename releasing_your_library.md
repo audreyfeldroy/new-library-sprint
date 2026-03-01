@@ -1,84 +1,90 @@
 # Releasing Your Library
 
+This is the home stretch. You'll push to GitHub, set up Trusted Publishing, and get your package on PyPI.
 
-## Releasing on GitHub
+## Push to GitHub
 
-1. Create a GitHub repo.
-2. Push your package code to GitHub.
+1. Create a new repository on GitHub. You can do this from the command line:
 
     ```
-    cd repo_name
-    git init
+    gh repo create your-username/text-cleanser --public --source=. --push
+    ```
+
+    Or create it on [github.com/new](https://github.com/new) and push manually:
+
+    ```
+    git init -b main
     git add .
     git commit -m "Initial commit"
-    git push -u origin master
+    git remote add origin https://github.com/your-username/text-cleanser.git
+    git push -u origin main
     ```
 
-3. Register your package on PyPI.
+2. Check that GitHub Actions CI is passing. Go to your repo's **Actions** tab. You should see the CI workflow running formatting, linting, type checking, and tests.
+
+## Enable GitHub Pages for docs
+
+1. In your repo, go to **Settings > Pages**.
+2. Under **Source**, select **GitHub Actions**.
+3. Re-run the Documentation workflow from the Actions tab if needed.
+
+Your docs will be live at `https://your-username.github.io/text-cleanser/`.
+
+## Set up Trusted Publishing on PyPI
+
+Trusted Publishing lets GitHub Actions publish to PyPI automatically when you tag a release. No API tokens to manage.
+
+1. Log in to [pypi.org](https://pypi.org/manage/account/publishing/).
+2. Scroll to **"Add a new pending publisher"**.
+3. Fill in:
+    - **PyPI project name**: `text-cleanser` (your package name)
+    - **Owner**: your GitHub username
+    - **Repository name**: `text-cleanser` (your repo name)
+    - **Workflow name**: `publish.yml`
+    - **Environment name**: `release` (or leave blank, depending on your workflow)
+4. Click **"Add"**.
+
+That's it. PyPI now trusts your GitHub Actions workflow to publish this package.
+
+## Publish your first release
+
+1. Make sure everything passes:
 
     ```
-    python setup.py register
+    just qa
     ```
 
-    That should generate the following:
+2. Create a version tag and push it:
 
     ```
-    running egg_info
-    writing upper_casing.egg-info/PKG-INFO
-    writing top-level names to upper_casing.egg-info/top_level.txt
-    writing dependency_links to upper_casing.egg-info/dependency_links.txt
-    reading manifest file 'upper_casing.egg-info/SOURCES.txt'
-    reading manifest template 'MANIFEST.in'
-    warning: no previously-included files matching '__pycache__' found under directory '*'
-    warning: no previously-included files matching '*.py[co]' found under directory '*'
-    writing manifest file 'upper_casing.egg-info/SOURCES.txt'
-    running check
-    Registering upper_casing to http://pypi.python.org/pypi
-    Server response (200): OK
+    just tag
     ```
 
-    It's that last line is important. It should say, `Server response (200): OK`. If
-    it doesn't please read the Troubleshooting chapter for answers.
+    This creates a git tag matching the version in `pyproject.toml` and pushes it to GitHub.
 
-## Registering on PyPI
+3. Go to your repo's **Actions** tab. You should see the publish workflow running. It builds your package, signs it with Sigstore, and uploads it to PyPI.
 
-Note: If you've already done this in the past, you can skip to the next section.
-
-TODO this whole section
-
-
-## Releasing on PyPI
-
-From the command-line
+4. Once it finishes, verify it works:
 
     ```
-    python setup.py publish
-    running sdist
-    running egg_info
-    creating upper_casing.egg-info
-    writing upper_casing.egg-info/PKG-INFO
-    <snip a lot of stuff for brevity>
-    Submitting dist/upper_casing-0.1.0.tar.gz to http://pypi.python.org/pypi
-    Server response (200): OK
-    Submitting /Users/danny/pydanny/cookiecutter-pymodule/upper_casing/dist/upper_casing-0.1.0-py2.py3-none-any.whl to http://pypi.python.org/pypi
-    Server response (200): OK
-    You probably want to also tag the version now:
-      git tag -a 0.1.0 -m 'version 0.1.0'
-      git push --tags
+    pip install text-cleanser
     ```
 
-    Again, look for the lines that say, `Server response (200): OK`. These mark a
-    successful upload of your new library.
+    Or better yet, ask a neighbor at the sprint to install it!
 
+## Celebrate
 
+You are now a published Python package author. Your package is on PyPI, installable by anyone in the world. Share the link:
 
-TODO possible simplified instructions from https://gist.github.com/audreyr/5990987
+```
+https://pypi.org/project/text-cleanser/
+```
 
-## Summary
+## What's next?
 
-You have now released your library:
+After the sprint, you can:
 
-* On GitHub as an open-source project
-* On PyPI as an open-source Python package
-
-Now others can use your library in their projects. They can even contribute back with bug fixes and new features.
+- **Add more features** and release them: bump the version with `uv version patch`, commit, and `just tag`
+- **Respond to issues and PRs** from users
+- **Add badges** to your README (CI status, PyPI version, Python versions)
+- **Tell people about it.** Post on social media, write a blog post, present at your local meetup.
